@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/3.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.0/ref/settings/
 """
-
+import django_heroku
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -160,4 +160,6 @@ CORS_ORIGIN_ALLOW_ALL = True
 FILE_UPLOAD_PERMISSION=0o640
 
 AUTH_USER_MODEL = 'accounts.UserAccount'
+django_heroku.settings(locals())
+
 
